@@ -1,0 +1,140 @@
+STRUCTURES
+
+1. struct Tableau
+Variables du struct :
+- int* donnees
+- int taille
+- int capacite
+
+Utilite :
+Ce struct represente un tableau dynamique d'entiers.
+`donnees` pointe vers la zone memoire qui contient les valeurs.
+`taille` indique combien d'elements sont actuellement stockes.
+`capacite` indique combien d'elements on peut stocker avant de devoir reallouer plus de memoire.
+
+Ce struct sert quand on veut :
+- stocker plusieurs valeurs les unes a la suite des autres
+- acceder rapidement a un element avec son indice
+- agrandir le tableau si on ajoute de nouvelles valeurs
+
+
+2. struct Noeud
+Variables du struct :
+- int valeur
+- Noeud* suivant
+
+Utilite :
+Ce struct represente un maillon d'une liste chainee.
+`valeur` contient l'information stockee dans le maillon.
+`suivant` pointe vers le maillon suivant de la liste.
+
+Ce struct sert a construire une liste chainee.
+Chaque noeud connait seulement sa propre valeur et l'adresse du noeud suivant.
+
+
+3. struct ListeChainee
+Variables du struct :
+- Noeud* tete
+
+Utilite :
+Ce struct represente une liste chainee.
+`tete` pointe vers le premier noeud de la liste.
+
+Ce struct sert quand on veut :
+- inserer facilement des elements au debut
+- representer une suite d'elements relies entre eux
+- manipuler une structure dynamique sans taille fixe au depart
+
+
+4. struct Pile
+Variables du struct :
+- int* donnees
+- int taille
+- int capacite
+
+Utilite :
+Ce struct represente une pile.
+Une pile suit le principe LIFO : Last In, First Out.
+Le dernier element ajoute est le premier qu'on retire.
+
+`donnees` contient les valeurs.
+`taille` indique combien d'elements sont dans la pile.
+`capacite` indique la place disponible en memoire.
+
+Ce struct sert quand on veut :
+- empiler des valeurs
+- depiler la derniere valeur ajoutee
+- modeliser une pile d'appels ou un historique
+
+
+5. struct File
+Variables du struct :
+- int* donnees
+- int taille
+- int capacite
+
+Utilite :
+Ce struct represente une file.
+Une file suit le principe FIFO : First In, First Out.
+Le premier element ajoute est le premier qu'on retire.
+
+`donnees` contient les valeurs.
+`taille` indique combien d'elements sont dans la file.
+`capacite` indique la place disponible en memoire.
+
+Ce struct sert quand on veut :
+- enfiler des valeurs a la fin
+- defiler la premiere valeur
+- gerer des elements dans l'ordre d'arrivee
+
+
+TRIS
+
+1. Tri par selection
+Ce tri permet de ranger un tableau en cherchant a chaque etape le plus petit element restant.
+On place cet element a la bonne position, puis on recommence sur le reste du tableau.
+
+Il sert a :
+- trier un tableau simplement
+- comprendre le principe de recherche du minimum
+- apprendre un tri facile a programmer
+
+
+2. Tri par insertion
+Ce tri permet de construire progressivement une partie deja triee.
+On prend chaque nouvel element et on l'insere a la bonne place parmi les precedents.
+
+Il sert a :
+- trier un tableau de facon simple
+- bien comprendre les decalages dans un tableau
+- etre efficace si le tableau est deja presque trie
+
+
+3. Tri a bulles
+Ce tri permet de trier un tableau en comparant des elements voisins et en les echangeant s'ils sont dans le mauvais ordre.
+Au fil des passages, les plus grandes valeurs remontent vers la fin du tableau.
+
+Il sert a :
+- comprendre les comparaisons locales
+- apprendre un tri tres simple
+- visualiser facilement les echanges
+
+
+4. Tri fusion
+Ce tri permet de trier un tableau en le divisant en deux parties, en triant chaque partie, puis en les fusionnant.
+Il utilise la recursion.
+
+Il sert a :
+- trier efficacement de grands tableaux
+- comprendre la methode diviser pour regner
+- travailler la recursion et la fusion de sous-tableaux tries
+
+
+5. Tri rapide
+Ce tri permet de trier un tableau en choisissant un pivot, puis en separant les elements plus petits et plus grands autour de ce pivot.
+On recommence ensuite sur les deux parties.
+
+Il sert a :
+- trier rapidement dans beaucoup de cas
+- comprendre la notion de partition
+- utiliser la recursion sur des sous-parties du tableau
